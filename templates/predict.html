@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Predict - Breast Cancer Risk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    {% if prediction %}
+    <script>
+        Swal.fire({
+            title: 'Prediction Result',
+            text: '{{ prediction }}',
+            icon: 'success'
+        });
+    </script>
+    {% endif %}
+
+    <header>
+        <h1>Breast Cancer Risk Prediction</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/predict" class="active">Predict</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main">
+        <h2>Enter Diagnostic Parameters</h2>
+        <form method="POST" action="/predict">
+            <label>Radius Mean:</label><input type="number" step="any" name="radius_mean" required>
+            <label>Texture Mean:</label><input type="number" step="any" name="texture_mean" required>
+            <label>Perimeter Mean:</label><input type="number" step="any" name="perimeter_mean" required>
+            <label>Area Mean:</label><input type="number" step="any" name="area_mean" required>
+            <label>Smoothness Mean:</label><input type="number" step="any" name="smoothness_mean" required>
+            <label>Compactness Mean:</label><input type="number" step="any" name="compactness_mean" required>
+            <label>Concavity Mean:</label><input type="number" step="any" name="concavity_mean" required>
+            <label>Concave Points Mean:</label><input type="number" step="any" name="concave_points_mean" required>
+            <label>Symmetry Mean:</label><input type="number" step="any" name="symmetry_mean" required>
+            <label>Fractal Dimension Mean:</label><input type="number" step="any" name="fractal_dimension_mean" required>
+
+            <label>Radius SE:</label><input type="number" step="any" name="radius_se" required>
+            <label>Texture SE:</label><input type="number" step="any" name="texture_se" required>
+            <label>Perimeter SE:</label><input type="number" step="any" name="perimeter_se" required>
+            <label>Area SE:</label><input type="number" step="any" name="area_se" required>
+            <label>Smoothness SE:</label><input type="number" step="any" name="smoothness_se" required>
+            <label>Compactness SE:</label><input type="number" step="any" name="compactness_se" required>
+            <label>Concavity SE:</label><input type="number" step="any" name="concavity_se" required>
+            <label>Concave Points SE:</label><input type="number" step="any" name="concave_points_se" required>
+            <label>Symmetry SE:</label><input type="number" step="any" name="symmetry_se" required>
+            <label>Fractal Dimension SE:</label><input type="number" step="any" name="fractal_dimension_se" required>
+
+            <label>Radius Worst:</label><input type="number" step="any" name="radius_worst" required>
+            <label>Texture Worst:</label><input type="number" step="any" name="texture_worst" required>
+            <label>Perimeter Worst:</label><input type="number" step="any" name="perimeter_worst" required>
+            <label>Area Worst:</label><input type="number" step="any" name="area_worst" required>
+            <label>Smoothness Worst:</label><input type="number" step="any" name="smoothness_worst" required>
+            <label>Compactness Worst:</label><input type="number" step="any" name="compactness_worst" required>
+            <label>Concavity Worst:</label><input type="number" step="any" name="concavity_worst" required>
+            <label>Concave Points Worst:</label><input type="number" step="any" name="concave_points_worst" required>
+            <label>Symmetry Worst:</label><input type="number" step="any" name="symmetry_worst" required>
+            <label>Fractal Dimension Worst:</label><input type="number" step="any" name="fractal_dimension_worst" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div class="contact-note">
+            <strong>Need help interpreting results?</strong><br />
+            Visit our <a href="/contact">Contact page</a> or email us at
+            <a href="mailto:sparshapoojary60@gmail.com">sparshapoojary60@gmail.com</a>.
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Breast Cancer Prediction System</p>
+    </footer>
+
+</body>
+</html>

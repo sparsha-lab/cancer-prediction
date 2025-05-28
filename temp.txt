@@ -1,0 +1,13 @@
+Python 3.12.4
+conda create --name health-stroke python=3.12.4
+ C:\Users\spars>conda activate health-stroke
+ (cancer-prediction) C:\Users\spars>code ..
+
+(cancer-prediction) C:\Users\spars>cd ..
+
+(cancer-prediction) C:\Users>cd ..
+
+(cancer-prediction) C:\>dir
+(cancer-prediction) C:\>cd Cancer prediction
+
+(cancer-prediction) C:\Cancer prediction>code .

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>About - Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>About This Project</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about" class="active">About</a></li>
+                <li><a href="/predict">Predict</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main">
+        <h2>What is this system?</h2>
+        <p>This Breast Cancer Prediction System is built using a machine learning model trained on the <strong>Wisconsin Breast Cancer Dataset</strong>.</p>
+        <p>It analyzes medical metrics such as tumor size, texture, and symmetry to classify whether the cancer is likely to be <strong>Malignant (M)</strong> or <strong>Benign (B)</strong>.</p>
+        <h3>Why it matters:</h3>
+        <ul>
+            <li>Early detection increases treatment success rates</li>
+            <li>Helps provide direction for medical consultation</li>
+            <li>Empowers individuals with awareness</li>
+        </ul>
+        <p>This tool is designed for educational and preliminary diagnostic purposes only. For medical advice, please consult a healthcare professional.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Breast Cancer Prediction System</p>
+    </footer>
+</body>
+</html>
